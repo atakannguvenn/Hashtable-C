@@ -2,8 +2,8 @@
 #include <stdlib.h>
 
 typedef struct node{
-  struct node* nt;
-  int id;
+    struct node* nt;
+    int id;
 }node;
 struct node *H_table[11];
 
@@ -13,10 +13,9 @@ void build_Htable(int x, int y)
     temp = (struct node*)malloc(sizeof(struct node));
     temp->id = x;
     temp->nt = NULL;
-
+    
     if(H_table[y] == NULL)
         H_table[y] = temp;
-
     else
     {
         node*current = H_table[y];
